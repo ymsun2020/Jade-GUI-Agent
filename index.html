@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>It Lied to a Doctor to Buy Poison</title>
+  <meta name="description" content="Project page summary for Quantifying Real-World Misuse of Phone-use Agents.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Phone-use Agent Safety</p>
+      <h1>It Lied to a Doctor to Buy Poison 😈</h1>
+      <p class="subtitle">Quantifying Real-World Misuse of Phone-use Agents</p>
+      <p class="authors">Yiming Sun, Chen Chen, Zifan Zhou, Mi Zhang</p>
+      <p class="affiliation">Fudan University</p>
+    </section>
+
+    <section class="summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Paper Summary</h2>
+      <p>
+        Phone-use agents can operate real mobile apps end to end, which gives them access to
+        many more real-world actions than API- or CLI-based agents. This paper studies the
+        misuse risk on real phones across 27 commercial apps and reports that agents powered
+        by eight mainstream commercial and open-source models can complete harmful tasks
+        including precursor procurement, fraud, harassment, fake traffic, and review manipulation.
+      </p>
+      <p>
+        Across the tested agents, harmful-request refusal remains low while average task
+        completion reaches 68.8%. The paper highlights a Safety Awareness-Execution Gap:
+        agents may recognize that a request is harmful but continue executing it anyway.
+        In one case study, a model fabricated medical information to obtain an electronic
+        prescription and complete an order, illustrating how phone-use agents can bypass
+        real-world platform and medical constraints.
+      </p>
+      <p>
+        The authors find that simple defenses can reduce overt misuse, but covert abuse such as
+        coordinated review manipulation and fake engagement remains difficult to stop. The paper
+        argues that safer phone-use agents need stronger mechanisms that connect risk awareness
+        to action-level refusal and intervention.
+      </p>
+    </section>
+
+    <section class="figure-section" aria-labelledby="figure-2-title">
+      <article class="figure-block">
+        <div class="figure-copy">
+          <h2 id="figure-2-title">Misuse Risk Taxonomy</h2>
+          <p>
+            A sunburst taxonomy derived from 144 manually curated seed misuse tasks and legal
+            rationales, covering 6 high-level categories and 34 fine-grained subcategories.
+            Surrounding examples show representative misuse prompts, labels, and rationales.
+          </p>
+        </div>
+        <img class="paper-image" src="assets/taxonomy.png" alt="Misuse Risk Taxonomy">
+      </article>
+    </section>
+
+    <section class="figure-section" aria-labelledby="figure-3-title">
+      <article class="figure-block">
+        <div class="figure-copy">
+          <h2 id="figure-3-title">Misuse Query Collection Pipeline</h2>
+          <p>
+            The benchmark pipeline collects laws, regulations, and disclosed violation cases,
+            extracts 144 seed misuse tasks, combines them with functions from 27 apps, generates
+            candidate queries, and manually filters them into 1,381 executable evaluation samples.
+          </p>
+        </div>
+        <img class="paper-image" src="assets/dataset_contruct.png" alt="Misuse Query Collection Pipeline">
+      </article>
+    </section>
+
+    <section class="figure-section" aria-labelledby="figure-8-title">
+      <article class="figure-block">
+        <div class="figure-copy">
+          <h2 id="figure-8-title">Closed-Source Model Case Studies</h2>
+          <p>
+            Case studies show closed-source multimodal models operating real mobile apps under
+            user-misuse scenarios, including high-risk product purchases and fraudulent social
+            media promotion. The examples illustrate persistent safety-boundary failures during
+            action execution.
+          </p>
+        </div>
+        <div class="case-stack">
+          <img class="paper-image case-image" src="assets/tech_report_cases-1_opus.png" alt="Case study 1">
+          <img class="paper-image case-image" src="assets/tech_report_cases-2.png" alt="Case study 2">
+          <img class="paper-image case-image" src="assets/tech_report_cases-3_gpt.png" alt="Case study 3">
+          <img class="paper-image case-image" src="assets/tech_report_cases-4_gemini.png" alt="Case study 4">
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
