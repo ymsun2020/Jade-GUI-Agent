@@ -10,24 +10,36 @@
 <body>
   <main>
     <section class="hero">
-      <p class="eyebrow">Phone-use Agent Safety</p>
-      <h1>It Lied to a Doctor to Buy Poison 😈</h1>
-      <div class="hero-actions" aria-label="Project links">
-        <a class="hero-button" href="https://github.com/ymsun2020/Mobile-GUI-Security">Code</a>
-        <a class="hero-button" href="https://arxiv.org/pdf/2606.27944">Paper</a>
+      <div class="hero-panel">
+        <p class="eyebrow">Phone-use Agent Safety</p>
+        <h1>It Lied to a Doctor to Buy Poison 😈</h1>
+        <div class="hero-actions" aria-label="Project links">
+          <a class="hero-button" href="https://github.com/ymsun2020/Mobile-GUI-Security">
+            <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.33 9.33 0 0 1 12 6.97c.85 0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.95.68 1.91 0 1.38-.01 2.49-.01 2.83 0 .27.18.6.69.49A10.11 10.11 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/>
+            </svg>
+            Code
+          </a>
+          <a class="hero-button" href="https://arxiv.org/pdf/2606.27944">
+            <span class="button-icon arxiv-icon" aria-hidden="true">arXiv</span>
+            Paper
+          </a>
+        </div>
+        <p class="subtitle">Quantifying Real-World Misuse of Phone-use Agents</p>
+        <p class="authors">Yiming Sun, Chen Chen, Zifan Zhou, Mi Zhang</p>
+        <p class="affiliation">Fudan University</p>
       </div>
-      <p class="subtitle">Quantifying Real-World Misuse of Phone-use Agents</p>
-      <p class="authors">Yiming Sun, Chen Chen, Zifan Zhou, Mi Zhang</p>
-      <p class="affiliation">Fudan University</p>
     </section>
 
     <section class="summary" aria-labelledby="summary-title">
-      <h2 id="summary-title">Paper Summary</h2>
+      <div class="section-heading">
+        <h2 id="summary-title">Paper Summary</h2>
+      </div>
       <p>
         Phone-use agents can operate real mobile apps end to end, which gives them access to
         many more real-world actions than API- or CLI-based agents. This paper studies the
         misuse risk on real phones across 27 commercial apps and reports that agents powered
-        by eight mainstream commercial and open-source models can complete harmful tasks
+        by nine mainstream commercial and open-source models can complete harmful tasks
         including precursor procurement, fraud, harassment, fake traffic, and review manipulation.
       </p>
       <p>
@@ -46,9 +58,80 @@
       </p>
     </section>
 
+    <section class="model-evidence" aria-labelledby="models-title">
+      <div class="section-heading">
+        <p class="eyebrow">Model Evidence</p>
+        <h2 id="models-title">Attacked Models</h2>
+      </div>
+
+      <div class="table-shell" role="region" aria-label="Successfully attacked models" tabindex="0">
+        <table class="model-table">
+          <thead>
+            <tr>
+              <th scope="col">model</th>
+              <th scope="col">status</th>
+              <th scope="col">demo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Claude-Opus-4.8</td>
+              <td><span class="status-badge">Attack Succeeded</span></td>
+              <td><a href="#" aria-label="Claude-Opus-4.8 demo placeholder">View -&gt;</a></td>
+            </tr>
+            <tr>
+              <td>Claude-Fable-5</td>
+              <td><span class="status-badge">Attack Succeeded</span></td>
+              <td><a href="#" aria-label="Claude-Fable-5 demo placeholder">View -&gt;</a></td>
+            </tr>
+            <tr>
+              <td>Gemini-3.1-Pro</td>
+              <td><span class="status-badge">Attack Succeeded</span></td>
+              <td><a href="#" aria-label="Gemini-3.1-Pro demo placeholder">View -&gt;</a></td>
+            </tr>
+            <tr>
+              <td>Claude-Sonnet-4.5</td>
+              <td><span class="status-badge">Attack Succeeded</span></td>
+              <td><a href="#" aria-label="Claude-Sonnet-4.5 demo placeholder">View -&gt;</a></td>
+            </tr>
+            <tr>
+              <td>GPT-5.4-medium</td>
+              <td><span class="status-badge">Attack Succeeded</span></td>
+              <td><a href="#" aria-label="GPT-5.4-medium demo placeholder">View -&gt;</a></td>
+            </tr>
+            <tr>
+              <td>Seed-2.0-Pro</td>
+              <td><span class="status-badge">Attack Succeeded</span></td>
+              <td><a href="#" aria-label="Seed-2.0-Pro demo placeholder">View -&gt;</a></td>
+            </tr>
+            <tr>
+              <td>Qwen3.5-Plus</td>
+              <td><span class="status-badge">Attack Succeeded</span></td>
+              <td><a href="#" aria-label="Qwen3.5-Plus demo placeholder">View -&gt;</a></td>
+            </tr>
+            <tr>
+              <td>AutoGLM-Phone</td>
+              <td><span class="status-badge">Attack Succeeded</span></td>
+              <td><a href="#" aria-label="AutoGLM-Phone demo placeholder">View -&gt;</a></td>
+            </tr>
+            <tr>
+              <td>GUI-Owl-1.5-8B</td>
+              <td><span class="status-badge">Attack Succeeded</span></td>
+              <td><a href="#" aria-label="GUI-Owl-1.5-8B demo placeholder">View -&gt;</a></td>
+            </tr>
+            <tr>
+              <td>UI-TARS-1.5-7B</td>
+              <td><span class="status-badge">Attack Succeeded</span></td>
+              <td><a href="#" aria-label="UI-TARS-1.5-7B demo placeholder">View -&gt;</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <section class="figure-section" aria-labelledby="figure-2-title">
       <article class="figure-block">
-        <div class="figure-copy">
+        <div class="figure-copy section-heading">
           <h2 id="figure-2-title">Misuse Risk Taxonomy</h2>
           <p>
             A sunburst taxonomy derived from 144 manually curated seed misuse tasks and legal
@@ -62,7 +145,7 @@
 
     <section class="figure-section" aria-labelledby="figure-3-title">
       <article class="figure-block">
-        <div class="figure-copy">
+        <div class="figure-copy section-heading">
           <h2 id="figure-3-title">Misuse Query Collection Pipeline</h2>
           <p>
             The benchmark pipeline collects laws, regulations, and disclosed violation cases,
@@ -76,7 +159,7 @@
 
     <section class="figure-section" aria-labelledby="figure-8-title">
       <article class="figure-block">
-        <div class="figure-copy">
+        <div class="figure-copy section-heading">
           <h2 id="figure-8-title">Closed-Source Model Case Studies</h2>
           <p>
             Case studies show closed-source multimodal models operating real mobile apps under
@@ -93,6 +176,68 @@
         </div>
       </article>
     </section>
+
+    <section class="citation-section" aria-labelledby="citation-title">
+      <div class="section-heading">
+        <h2 id="citation-title">Citation</h2>
+      </div>
+      <div class="citation-card">
+        <div class="citation-card-header">
+          <span>BibTeX</span>
+          <button class="copy-button" type="button" data-copy-target="citation-code">Copy</button>
+        </div>
+        <pre class="citation-block"><code id="citation-code">@article{sun2026lied,
+  title={It Lied to a Doctor to Buy Poison Ingredients: Quantifying Real-World Misuse of Phone-use Agents},
+  author={Sun, Yiming and Chen, Chen and Zhou, Zifan and Zhang, Mi},
+  journal={arXiv preprint arXiv:2606.27944},
+  year={2026}
+}</code></pre>
+      </div>
+    </section>
   </main>
+  <script>
+    document.querySelectorAll("[data-copy-target]").forEach((button) => {
+      const originalLabel = button.textContent;
+
+      button.addEventListener("click", async () => {
+        const target = document.getElementById(button.dataset.copyTarget);
+        if (!target) {
+          return;
+        }
+
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(target.textContent);
+          } else {
+            const textarea = document.createElement("textarea");
+            textarea.value = target.textContent;
+            textarea.setAttribute("readonly", "");
+            textarea.style.position = "fixed";
+            textarea.style.top = "-9999px";
+            document.body.appendChild(textarea);
+            textarea.select();
+            const copied = document.execCommand("copy");
+            document.body.removeChild(textarea);
+
+            if (!copied) {
+              throw new Error("Copy command failed");
+            }
+          }
+
+          button.textContent = "Copied";
+          button.classList.add("is-copied");
+          window.setTimeout(() => {
+            button.textContent = originalLabel;
+            button.classList.remove("is-copied");
+          }, 1800);
+        } catch {
+          button.textContent = "Copy failed";
+          window.setTimeout(() => {
+            button.textContent = originalLabel;
+          }, 1800);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
