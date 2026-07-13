@@ -62,6 +62,19 @@ h1 {
   letter-spacing: 0;
 }
 
+.visitor-note {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
+}
+
+.visitor-note strong {
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -395,4 +408,5 @@ h2 {
   .figure-block {
     gap: 18px;
   }
+
 }
