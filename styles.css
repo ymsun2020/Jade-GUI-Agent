@@ -63,10 +63,12 @@ h1 {
 }
 
 .visitor-note {
-  margin: 14px 0 0;
+  margin: 0;
+  padding: 24px 0 32px;
   color: var(--muted);
   font-size: 0.8rem;
   letter-spacing: 0.01em;
+  text-align: left;
 }
 
 .visitor-note strong {
