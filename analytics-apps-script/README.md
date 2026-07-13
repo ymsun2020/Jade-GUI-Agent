@@ -13,3 +13,15 @@ This Apps Script web app reads GA4 property `545207619` and exposes only the cum
 7. Copy the `/exec` URL into `index.html` as the `data-endpoint` value on the `analytics.js` script tag.
 
 Never place an OAuth token or service-account credential in this repository.
+
+## Archive cumulative GitHub views
+
+`GithubTraffic.gs` keeps an exact cumulative page-view total from the earliest day GitHub still exposes when collection starts. It imports the current rolling 14-day window and then runs every six hours. Each response is upserted by repository and UTC date, so overlapping windows and later corrections are not double-counted.
+
+1. Create a fine-grained GitHub personal access token for `Mobile-GUI-Security` and `Jade-GUI-Agent` with **Administration: Read-only** repository permission.
+2. In the Apps Script project, open **Project Settings → Script properties** and add `GITHUB_TRAFFIC_TOKEN`. Paste the token as its value. Do not add the token to a source file.
+3. Add `GithubTraffic.gs` to the same Apps Script project.
+4. Run `setupGithubTrafficCollector` once and approve the Google Sheets, external request, and trigger permissions.
+5. Open the spreadsheet URL printed in the execution log. `Daily Views` contains the immutable archive and `Totals` contains the cumulative counts.
+
+Run `getGithubTrafficSpreadsheetUrl` later to print the private spreadsheet URL again. Historical views older than GitHub's initial 14-day response cannot be reconstructed.
