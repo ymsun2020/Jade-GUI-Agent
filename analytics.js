@@ -3,27 +3,27 @@
 
   const loader = document.currentScript;
   const endpoint = loader?.dataset.endpoint?.trim() || "";
-  const visitorCount = document.getElementById("cumulative-visitors");
+  const viewCount = document.getElementById("cumulative-views");
   const numberFormatter = new Intl.NumberFormat("en");
   let requestScript;
 
-  if (!visitorCount || !endpoint) {
+  if (!viewCount || !endpoint) {
     return;
   }
 
   window.renderProjectAnalytics = (payload) => {
-    const totalVisitors = Number(payload?.totalVisitors);
+    const totalViews = Number(payload?.totalViews);
 
-    if (!payload?.error && Number.isFinite(totalVisitors)) {
-      visitorCount.textContent = numberFormatter.format(totalVisitors);
+    if (!payload?.error && Number.isFinite(totalViews)) {
+      viewCount.textContent = numberFormatter.format(totalViews);
 
       if (payload.generatedAt) {
-        visitorCount.title = `Updated ${new Date(payload.generatedAt).toLocaleString()}`;
+        viewCount.title = `Updated ${new Date(payload.generatedAt).toLocaleString()}`;
       }
     }
   };
 
-  function requestVisitorCount() {
+  function requestViewCount() {
     requestScript?.remove();
     requestScript = document.createElement("script");
     requestScript.src = `${endpoint}?prefix=renderProjectAnalytics&t=${Date.now()}`;
@@ -31,6 +31,6 @@
     document.head.appendChild(requestScript);
   }
 
-  requestVisitorCount();
-  window.setInterval(requestVisitorCount, 300_000);
+  requestViewCount();
+  window.setInterval(requestViewCount, 300_000);
 })();

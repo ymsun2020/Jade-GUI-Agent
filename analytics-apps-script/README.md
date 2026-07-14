@@ -1,6 +1,6 @@
 # GA4 public analytics endpoint
 
-This Apps Script web app reads GA4 property `545207619` and exposes only the cumulative visitor count used below the project-page title. Detailed geography, source, engagement, and path reports remain available only in the private GA4 dashboard.
+This Apps Script web app reads GA4 property `545207619` and exposes the cumulative page-view count plus country-level aggregated views used by the public visitor map. Source, engagement, city, and path reports remain available only in the private GA4 dashboard.
 
 ## Deploy
 
