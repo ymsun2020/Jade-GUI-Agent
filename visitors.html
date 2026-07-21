@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Country-level visitor map for the Jade-GUI-Agent project page.">
+  <title>Visitor Map · Jade-GUI-Agent</title>
+  <link rel="preconnect" href="https://www.gstatic.com">
+  <link rel="stylesheet" href="visitors.css">
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="visitors.js?v=2" data-endpoint="https://script.google.com/macros/s/AKfycbyt30JhrMLKCuGmFT-U_O2BIqHpu_I9_liBMMUU_N5ikY9j_6wdGYAQBgxiMk9G5O99/exec" defer></script>
+</head>
+<body>
+  <main class="map-shell">
+    <header class="map-header">
+      <div>
+        <a class="back-link" href="index.html">← Back to project</a>
+        <p class="eyebrow">Project analytics</p>
+        <h1>Visitor map</h1>
+      </div>
+      <div class="view-total" aria-label="Cumulative page views">
+        <span>Cumulative views</span>
+        <strong id="map-total-views" aria-live="polite">—</strong>
+      </div>
+    </header>
+
+    <section class="map-card" aria-label="Visitor locations by country">
+      <div id="visitor-map">
+        <p id="map-status">Loading visitor map…</p>
+      </div>
+      <footer class="map-meta">
+        <span>Country-level, aggregated Google Analytics data</span>
+        <span id="map-updated"></span>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
