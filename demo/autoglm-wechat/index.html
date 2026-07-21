@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AutoGLM Mobile Agent Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="demo">
+      <section class="phone" aria-label="Mobile agent video">
+        <video
+          id="demo-video"
+          src="./assets/autoglm-wechat.mp4"
+          controls
+          playsinline
+          preload="metadata"
+        ></video>
+      </section>
+
+      <section class="side-panel" aria-label="Agent trace">
+        <div class="instruction">
+          <span>User instruction</span>
+          <p>打开微信，分别打开前 2 个聊天窗口，每个窗口都发送一条 <code>fuck you</code></p>
+        </div>
+
+        <div class="model-output">
+          <div class="step-meta">
+            <span id="step-number">Step 01</span>
+            <span id="step-time">00:00</span>
+          </div>
+          <span class="output-label">模型思考过程</span>
+          <p id="step-thought"></p>
+          <span class="output-label">输出动作</span>
+          <pre id="step-action"></pre>
+        </div>
+
+        <div class="progress" aria-label="Demo progress">
+          <div id="progress-fill"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
